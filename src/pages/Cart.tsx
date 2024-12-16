@@ -19,7 +19,7 @@ const Cart = () => {
         ? data.result.reduce((total, item) => total + item.productId.price * item.quantity, 0)
         : 0;
     return <>
-        {data?.result && data.result.length > 1 ? <div className="container my-5">
+        {data?.result && data.result.length >= 1 ? <div className="container my-5">
             <div className="d-flex justify-content-between align-items-center mb-4">
                 <div>
                     <h2>Shopping Cart</h2>
