@@ -1,9 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useGetAllproductsQuery } from '../redux/cartApi'
+import { RootState } from '../redux/store'
+import { useSelector } from 'react-redux'
+import { useGetcartProductQuery } from '../redux/cartApi'
 
 const Navbar = () => {
-    const { data } = useGetAllproductsQuery("668402180dfdb6358e94dc5c")
+    const { user } = useSelector<RootState, any>(state => state.auth)
+
+    const { data } = useGetcartProductQuery(user && user._id)
     console.log(data && data.result);
 
     return <>
