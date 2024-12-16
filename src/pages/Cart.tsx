@@ -71,8 +71,9 @@ const Cart = () => {
                     <h1>Cart Is Empty</h1>
                 </div>
                 <div>
-                    <Link to="/admin/pro">
+                    <Link to="/cart/pro">
                         <button className='btn btn-primary'> Shop Now</button>
+                        {/* <button className='btn btn-primary'> Shop Now</button> */}
                     </Link>
                 </div>
             </div>
