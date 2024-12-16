@@ -19,8 +19,7 @@ const Cart = () => {
         ? data.result.reduce((total, item) => total + item.productId.price * item.quantity, 0)
         : 0;
     return <>
-
-        <div className="container my-5">
+        {data?.result && data.result.length > 1 ? <div className="container my-5">
             <div className="d-flex justify-content-between align-items-center mb-4">
                 <div>
                     <h2>Shopping Cart</h2>
@@ -66,7 +65,18 @@ const Cart = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> : <>
+            <div className='text-center'>
+                <h1> Cart Is Empty</h1>
+                <div>
+                    <Link to="/cart/pro">
+                        <button className='btn btn-primary'>Shop Now</button>
+                    </Link>
+                </div>
+            </div>
+
+        </>
+        }
 
     </>
 }
