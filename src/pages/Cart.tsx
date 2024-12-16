@@ -19,13 +19,14 @@ const Cart = () => {
         ? data.result.reduce((total, item) => total + item.productId.price * item.quantity, 0)
         : 0;
     return <>
+
         <div className="container my-5">
             <div className="d-flex justify-content-between align-items-center mb-4">
                 <div>
                     <h2>Shopping Cart</h2>
                 </div>
                 <div>
-                    <button onClick={() => emptycart("668402180dfdb6358e94dc5c")} className="btn btn-sm btn-danger">Empty Cart</button>
+                    <button onClick={() => emptycart(user && user._id)} className="btn btn-sm btn-danger">Empty Cart</button>
                 </div>
             </div>
             <div className="row">
