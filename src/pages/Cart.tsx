@@ -58,7 +58,7 @@ const Cart = () => {
                             <p className="card-text">
                                 <strong>Total: ${(subtotal).toFixed(2)}</strong>
                             </p>
-                            <Link to="/cart/checkout" className="btn btn-primary w-100">
+                            <Link to="/cart/checkout" className="btn btn-secondary w-100">
                                 Proceed to Checkout
                             </Link>
                         </div>
